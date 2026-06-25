@@ -9,15 +9,13 @@ class Solution {
             }
         }
         for(int i=0;i<n;i++){
-            int l=0,r=n-1;
-            while(l<r){
-                int temp=matrix[i][l];
-                matrix[i][l]=matrix[i][r];
-                matrix[i][r]= temp;
-                l++;
-                r--;
+            for(int j=0;j<n/2;j++){
+                int temp=matrix[i][j];
+                matrix[i][j]=matrix[i][n-1-j];
+                matrix[i][n-1-j]=temp;
+    
             }
         }
-
+        
     }
 }
